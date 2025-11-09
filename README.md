@@ -2,7 +2,7 @@
 
 repository for mirroring posts from the detroit tigers's X account to here via. [sportsbots.xyz](https://sportsbots.xyz) over at mastodon.
 
-I would usually have this activated during the offseason where there isn't much demand for manual monitoring and posting.
+I would usually have this activated during the offseason where there isn't much demand for manual monitoring and posting, but sometimes I may activate it where its necessary.
 
 ## credits
 
