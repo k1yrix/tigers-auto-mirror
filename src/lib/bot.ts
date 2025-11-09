@@ -81,7 +81,7 @@ export default class Bot
   ): Promise<void> {
 
     var postNum = 20; // Specify the number of recent posts to compare from the logged in user's feed.
-    var bskyFeedAwait = await this.userAgent.app.bsky.feed.getAuthorFeed({actor: "CHANGETHIS.bsky.social", limit: postNum,}); // Get a defined number + 2 of most recent posts from the logged in user's feed.
+    var bskyFeedAwait = await this.userAgent.app.bsky.feed.getAuthorFeed({actor: "nottigers.bsky.social", limit: postNum,}); // Get a defined number + 2 of most recent posts from the logged in user's feed.
     var bskyFeed = bskyFeedAwait["data"]["feed"]; // Filter down the await values so we are only looking at the feeds.
     for (let i = 0; i < bskyFeed.length; i++) // Consider all collected posts.
       {
@@ -172,7 +172,7 @@ export default class Bot
           if (cardBuffer.length > 1000000)
           {
             console.log("file too big");
-            cardResponse = await axios.get("https://media.d3.nhle.com/image/private/t_ratio16_9-size50/v1697721957/prd/assets/flyers/assets/phi_2568x1144.png", { responseType: 'arraybuffer'}); 
+            cardResponse = await axios.get("https://wallpapers.com/images/hd/detroit-tigers-logo-3ik7qsgpfjrffwjd.jpg", { responseType: 'arraybuffer'}); 
             cardBuffer = Buffer.from(cardResponse.data, "utf-8");
           }
           const cardUpload = await this.userAgent.com.atproto.repo.uploadBlob(cardBuffer, {encoding: "image/png"});
