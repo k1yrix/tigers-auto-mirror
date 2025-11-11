@@ -1,6 +1,6 @@
 name: "Post to Bluesky (Manual Jog)"
 on:
-  workflow-dispatch
+  workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
