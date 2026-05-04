@@ -1,7 +1,8 @@
 name: "Post to Bluesky (Offseason Mode)"
 on:
   schedule:
-    - cron: "*/30 0-1,10-23 * 1-2,11-12 *"
+    - cron: "*/30 10-23 * 1-2,11-12 *"
+      timezone: "America/New_York"
 jobs:
   build:
     runs-on: ubuntu-latest
