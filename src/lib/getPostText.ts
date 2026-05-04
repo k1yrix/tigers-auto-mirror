@@ -12,7 +12,7 @@ const mastodon = new Mastodon.API({access_token: '${{ secrets.ACCESS_TOKEN }}', 
 */
 export default async function getPostText() 
 {
-	const limitVal = 5; // The number of posts to get from Mastodon.
+	const limitVal = 3; // The number of posts to get from Mastodon.
 	
 	// Regex list to address formatting discrepancies between Mastodon posts and Bluesky posts
 	var pReg = new RegExp("</p><p>", "g"); // A regex to deal with <p></p>. This should create a new section in the text, which we do via 2 line breaks.
