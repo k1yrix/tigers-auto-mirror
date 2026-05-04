@@ -1,7 +1,7 @@
 name: "Post to Bluesky (Postgame In-Season Mode)"
 on:
   schedule:
-    - cron: "*/30 0-1,10-23 * 1-2,11-12 *"
+    - cron: "*/30 0-1,10-23 * 3-9 *"
 jobs:
   build:
     runs-on: ubuntu-latest
