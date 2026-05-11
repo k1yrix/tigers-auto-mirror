@@ -1,8 +1,8 @@
 name: "Post to Bluesky (Automatic In-Season Mode)"
 on:
   schedule:
-    - cron: "*/15 13-23,0-3 * 3-9 *" # runs only 13-23 + 0-3 (9-23 EDT/EST) with an 9 hour break in order to save actions quota, can be interchangable between 15 and 30 minute intervals
-      # timezone: "America/New_York"
+    - cron: "*/15 9-23 * 3-9 *" # runs only 13-23 + 0-3 (9-23 EDT/EST) with an 9 hour break in order to save actions quota, can be interchangable between 15 and 30 minute intervals
+      timezone: "America/New_York"
 jobs:
   build:
     runs-on: self-hosted
