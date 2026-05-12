@@ -1,6 +1,6 @@
 name: "Post to Bluesky (Automatic In-Season Mode)"
 on:
-  repository_dispatch: # the cron job uses the same cron operand used below (time relative to America/New_York), but uses cron-job.org to trigger the workflow through the API instead of github's own cron scheduler
+  repository_dispatch: # the dispatch will be called from an external cron scheduler over at cron-job.org to trigger the workflow through the API instead of github's own cron scheduler
   # reason why I moved it to cron-job.org because github's own scheduler was too slow and out of sync from the scheduled run time, it's not going to be effective at what I want to do
   # the cron used for this workflow is: "*/15 13-23,0-3 * 3-9 *" --- it runs every 15 minutes relative to the top of the hour between 13-23 & 0-3 UTC (or 9-23 ET in America/New_York terms) at any given (all seven) day between march through september
     types: [run-cron-job]
