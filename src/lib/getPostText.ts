@@ -25,7 +25,11 @@ export default async function getPostText()
 	var tigersReg = new RegExp("@tigers@sportsbots.xyz", "g"); // A regex to deal with Flyers's @. Should be replaced with the bot's @.
 	var tagReg = new RegExp("<(:?[^>]+)>", "g"); // A general regex for HTML. Used to get the plaintext value of the mastodon post without tag notation.
 	var invalidLinkReg = new RegExp("\\S*(\\.com|\\.ca|\\.org|\\.net)\\S*(…|\\.\\.\\.)", "g");
-	var nbcsphillyReg = new RegExp("@nbcsphilly", "g"); // Regex example for a substitution within the post text. Can be helpful for if you want to replace an X/Twitter handle with the user's name
+	// var nbcsphillyReg = new RegExp("@nbcsphilly", "g"); // Regex example for a substitution within the post text. Can be helpful for if you want to replace an X/Twitter handle with the user's name
+	var ninetysevenone = new RegExp("@971theticketxyt", "g");
+	var deesssen = new RegExp("@WatchDSN", "g");
+	var mmmelbee = new RegExp("@MLB", "g");
+	var peacock = new RegExp("@peacock", "g");
 
 	var awaitTweet = await mastodon.getStatuses("109672525265151811", {'limit':limitVal}); //Use the Mastodon API to get a specified number of recent posts from the Mastodon API.
 	var string = JSON.stringify(awaitTweet); // Convert the post into a JSON string.
@@ -86,7 +90,11 @@ export default async function getPostText()
 		contentString = contentString.replace(sportsBotsReg, "");
 		contentString = contentString.replace(tigersReg, "nottigers.bsky.social");
 		contentString = contentString.replace(tagReg, "");
-		contentString = contentString.replace(nbcsphillyReg, "NBCSP");
+		// contentString = contentString.replace(nbcsphillyReg, "NBCSP");
+		contentString = contentString.replace(deesssen, "Detroit SportsNet");
+		contentString = contentString.replace(ninetysevenone, "@971theticketxyt.bsky.social");
+		contentString = contentString.replace(mmmelbee, "@mlb.com");
+		contentString = contentString.replace(peacock, "Peacock/NBCSN");
 		
 
 		if (contentString.includes("RT ") || contentString.includes("Retweet ") || contentString.includes("retweet ") || contentString.includes("RETWEET "))
