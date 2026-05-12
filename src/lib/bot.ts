@@ -418,7 +418,7 @@ export default class Bot
         }
         if (postCount == mastodonArr.length)
         {
-          await bot.post(false, "None!^&None!^&None!^&None", "None!^&None!^&None!^&None", "None", "ERROR: Repost Detection Glitch.");
+          await bot.post(false, "None!^&None!^&None!^&None", "None!^&None!^&None!^&None", "None", ""); // ERROR: Repost Detection Glitch.
         }
       }
       return; // Return void, we're done. 
