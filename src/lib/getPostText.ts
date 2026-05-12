@@ -30,6 +30,7 @@ export default async function getPostText()
 	var deesssen = new RegExp("@WatchDSN", "g");
 	var mmmelbee = new RegExp("@MLB", "g");
 	var peacock = new RegExp("@peacock", "g");
+	var cuethemlbonfoxtheme = new RegExp("@MLBONFOX", "g");
 
 	var awaitTweet = await mastodon.getStatuses("109672525265151811", {'limit':limitVal}); //Use the Mastodon API to get a specified number of recent posts from the Mastodon API.
 	var string = JSON.stringify(awaitTweet); // Convert the post into a JSON string.
@@ -95,6 +96,7 @@ export default async function getPostText()
 		contentString = contentString.replace(ninetysevenone, "@971theticketxyt.bsky.social");
 		contentString = contentString.replace(mmmelbee, "@mlb.com");
 		contentString = contentString.replace(peacock, "Peacock/NBCSN");
+		contentString = contentString.replace(cuethemlbonfoxtheme, "MLB on FOX");
 		
 
 		if (contentString.includes("RT ") || contentString.includes("Retweet ") || contentString.includes("retweet ") || contentString.includes("RETWEET "))
