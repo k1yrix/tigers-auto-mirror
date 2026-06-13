@@ -7,7 +7,8 @@ on:
     types: [run-cron-job]
 jobs:
   build:
-    runs-on: self-hosted # the action goes to my homelab machines so it doesn't use github's because I don't want to spend money
+    # runs-on: self-hosted # the action goes to my homelab machines so it doesn't use github's because I don't want to spend money
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js
